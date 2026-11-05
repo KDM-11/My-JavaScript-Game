@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+
+    background: #f3f6ef;
+    color: #1d2a24;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.levels, .buttons {
+    display: flex;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    font-size: 1rem;
+    border: 2px solid #1d2a24;
+    border-radius: 6px;
+    background: white;
+    cursor: pointer;
+}
+
+.label {
+    color: slategray;
+    margin: 8px 0 4px;
+}
+
+/* Word bank Formating */
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    min-height: 80px;
+    padding: 12px;
+    border: 2px dashed black;
+    border-radius: 8px;
+}
+
+.box.target { background: #dcebe2; }
+.box.right  { border: 2px solid #2f7d5b; background: #dcebe2; }
+
+/* to enable drag and drop fuctionaity*/
+.letter {
+    width: 46px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: white;
+    border: 2px solid black;
+    border-radius: 6px;
+    cursor: grab;
+    user-select: none;
+    touch-action: none;
+}
+
+.letter.lifted { opacity: 0.3; }
+.letter.before { margin-left: 12px; border-left: 6px solid #2f7d5b; }
+
+.ghost {
+    position: fixed;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+}
+
+#message { font-weight: bold; min-height: 1.5em; }
+#message.good { color: #2f7d5b; }
+#message.bad  { color: red; }

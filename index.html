@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Scramble</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+    <h1>Word Scramble</h1>
+    <p id="status"></p>
+
+    <div class="levels">
+        <button onclick="startLevel('easy')">Easy</button>
+        <button onclick="startLevel('medium')">Medium</button>
+        <button onclick="startLevel('hard')">Hard</button>
+    </div>
+
+    <p id="clue"></p>
+
+    <p class="label">Your word</p>
+    <div class="box" id="answer"></div>
+
+    <p class="label">Letter bank</p>
+    <div class="box" id="bank"></div>
+
+    <p id="message"></p>
+
+    <div class="buttons">
+        <button onclick="checkAnswer()">Check</button>
+        <button onclick="showHint()">Hint</button>
+        <button onclick="nextWord()">Next</button>
+    </div>
+
+</main>
+<script src="words.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
